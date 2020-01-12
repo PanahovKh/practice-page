@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root {
+  --color-white:#f3f3f3;
+  --color-darkblue:#1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green:#37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  font-family: 'Poppins', san-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+}
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(115deg, rgba(58, 58, 158, 0.8), rgba(136, 136, 206, 0.7)), url(https://raw.githubusercontent.com/lasjorg/fcc-form-example-image/master/67103817-7c51e200-f18b-11e9-975f-f74561336a9a-lj.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.container {
+  width: 100%;
+  margin: 50px auto 0 auto;
+}
+@media screen and(min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media screen and(min-width:768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+p {
+  font-size: 20px;
+}
+h1, p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+button{
+  border: none;
+}
+.clue {
+  font-size: 15px;
+  color: #e4e4e4;
+}
+
+/*form*/
+form {
+  background: var(--color-darkblue-alpha);
+  border-radius:  4px ;
+  padding: 40px 10px;
+  margin: 20px 10%;
+}
+
+@media screen and(min-width: 480px) {
+  form {
+    padding: 40px;
+  }
+}
+
+label {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    margin: 4px;
+  }
+
+input, button, select, textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.form-group {
+  margin: 0 auto 20px auto;
+  padding: 4px;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #ced4da;
+}
+
+.input-radio, .input-checkbox {
+  display: inline-block;
+  margin-right: 10px;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 10px;
+  resize: vertical;
+}
+
+#submit {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
